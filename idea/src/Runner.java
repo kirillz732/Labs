@@ -23,7 +23,7 @@ public class Runner {
 			spisok.add(work);
 		}
 
-			File myFile = new File( new File( "workers.txt").getAbsolutePath())
+			File myFile = new File(  "workers.txt");
 
 			try {
 				FileOutputStream fileOutput = new FileOutputStream(myFile);
