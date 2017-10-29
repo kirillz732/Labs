@@ -5,20 +5,20 @@ import java.io.Serializable;
 		private String name;
 		private double stazh;
 		private String dolzhnost;
-		private double stavka;
-		private static final double koef = 0.15;
+		private static final double stavka = 450;
+		private double koef;
 
-		public Workers(String name, double stazh, String dolzhnost, double stavka) {
+		public Workers(String name, double stazh, String dolzhnost, double koef) {
 			this.name = name;
 			this.stazh = stazh;
 			this.dolzhnost = dolzhnost;
-			this.stavka = stavka;
+			this.koef = koef;
 		}
 
 		private double getMoney() throws MyException {
-			if (stavka <=0)
+			if (koef <=0)
 				throw new MyException();
-			return stavka + stavka * (koef * stazh);
+			return  stavka * (koef * stazh);
 		}
 
 		public void setName(String name) {
