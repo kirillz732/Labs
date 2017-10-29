@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Runner {
 	public static void main(String[] args) {
-		
+
 		ArrayList<Workers> spisok = new ArrayList<Workers>();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Введите количество сотрудников: ");
@@ -21,9 +21,10 @@ public class Runner {
 			sc.nextLine();
 			System.out.print("Введен " + (i + 1) + "-й разработчик" + " Должность: ");
 			String dolzhnost = sc.nextLine();
-			System.out.print("Введен " + (i + 1) + "-й разработчик" + " Ставка: ");
-			double stavka = sc.nextDouble();
-			Workers work = new Workers(name, stazh, dolzhnost, stavka);
+			System.out.print("Введен " + (i + 1) + "-й разработчик" + " Коэффициент: ");
+			double koef= sc.nextDouble();
+			sc.nextLine();
+			Workers work = new Workers(name, stazh, dolzhnost, koef);
 			spisok.add(work);
 		}
 
@@ -58,6 +59,11 @@ public class Runner {
 	}
 }
 }
+
+
+
+
+
 
 
 
